@@ -1039,6 +1039,30 @@ function publishAll(){sync();toast('Publicado na vitrine!','ok')}
 load();fillFields();buildGpicker();renderCourseList();renderCatList();renderHeroImgs();populateCatSelect();save();
 updateGradPreview();updateBgGradPreview();
 document.getElementById('vitrine-frame').addEventListener('load',()=>{try{document.getElementById('vitrine-frame').contentWindow.applyState?.()}catch{}});
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAEk1jWTq-hjjwrTrafSYtSVBM6N2h6QI8",
+    authDomain: "cursos-uniteke.firebaseapp.com",
+    projectId: "cursos-uniteke",
+    storageBucket: "cursos-uniteke.firebasestorage.app",
+    messagingSenderId: "1065934787086",
+    appId: "1:1065934787086:web:fc85db1bdc8ebe5de2625f",
+    measurementId: "G-56ZRZ9K11L"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
 </script>
 </body>
 </html>
