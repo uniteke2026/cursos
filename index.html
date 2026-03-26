@@ -292,6 +292,30 @@ window.addEventListener('scroll',()=>document.getElementById('nav').classList.to
 const obs=new IntersectionObserver(entries=>entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*80);obs.unobserve(e.target)}}),{threshold:.07});
 window.addEventListener('storage',e=>{if([SK,CK,HK,CATK].includes(e.key))applyState()});
 applyState();
+
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAEk1jWTq-hjjwrTrafSYtSVBM6N2h6QI8",
+    authDomain: "cursos-uniteke.firebaseapp.com",
+    projectId: "cursos-uniteke",
+    storageBucket: "cursos-uniteke.firebasestorage.app",
+    messagingSenderId: "1065934787086",
+    appId: "1:1065934787086:web:fc85db1bdc8ebe5de2625f",
+    measurementId: "G-56ZRZ9K11L"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </script>
 </body>
 </html>
